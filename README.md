@@ -1,4 +1,4 @@
-<h1>Inrenship</h1>
+<h1>Internship</h1>
 
 </br>
 
