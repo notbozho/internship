@@ -1,0 +1,16 @@
+{
+    "name": "titleReader",
+    "description": "Reads the title of a chrome tab",
+    "manifest_version": 3,
+    "version": "0.0.1",
+    "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ],
+    "permissions": [
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
