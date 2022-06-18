@@ -1,3 +1,9 @@
+#title {
+    position: relative;;
+    text-align: center;
+}
+
 body {
     width: 350px;
+    font-style: italic;
 }
