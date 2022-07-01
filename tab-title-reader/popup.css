@@ -1,9 +1,21 @@
-#title {
+body {
+    width: 350px;
+    font-style: italic;
+    background-color: aqua;
+}
+
+.curr-tab-title {
     position: relative;;
     text-align: center;
 }
 
-body {
-    width: 350px;
-    font-style: italic;
+.get-curr-url-btn {
+    text-align: center;
+    position: relative;
+
+    width: 20vw;
+    height: 20vh;
+    
+    margin-left: 40%;
+    margin-right: 40%;
 }
