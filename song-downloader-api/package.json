@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express.js": "^1.0.0",
-    "helmet": "^5.1.0"
+    "helmet": "^5.1.0",
+    "nodemon": "^2.0.19",
+    "ytdl-core": "^4.11.0"
   }
 }
