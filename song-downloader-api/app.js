@@ -3,11 +3,13 @@ const app = express();
 
 const helmet = require('helmet');
 
-const downloadSongRouter = require('./routes/downloadSong.route');
+const downloadYoutubeRouter = require('./routes/downloadYoutube.route');
+const downloadSpotifyRouter = require('./routes/downloadSpotify.route');
 
 app.use(helmet());
 
-app.use('/download-song', downloadSongRouter);
+app.use('/downloadYoutube', downloadYoutubeRouter);
+app.use('/downloadSpotify', downloadSpotifyRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
