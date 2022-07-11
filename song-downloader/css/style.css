@@ -1,0 +1,26 @@
+body {
+    width: 15rem;
+    outline: 5px solid #0d6efd;
+    outline-offset: -5px;
+    padding: 10px;
+}
+
+/* .container {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    text-align: center;
+} */
+
+.centered {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    flex-flow: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.headerContainer {
+    padding: 2rem;
+}

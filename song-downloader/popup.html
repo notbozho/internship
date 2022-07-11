@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container centered">
+            <div class="headerContainer">
+                <h1 id="header" class="text-center"><mark>Youtube</mark> downloader</h1>
+            </div>
+            <h1 id="test"></h1>
+            <div class="spinner-border text-primary" role="status" id="loader">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <h2 id="videoInfo" color="green"> </h2>
+            <div class="form-check form-switch center-checkbox">
+                <input class="form-check-input" type="checkbox" role="switch" id="audioOnlySwitch">
+                <label class="form-check-label" for="audioOnlySwitch" id="audioOnlySwitchLabel">Audio Only</label>
+            </div>
+            <button type="button" class="btn btn-primary" id="testBtn">Download</button>
+        </div>
+
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>
