@@ -13,16 +13,27 @@ const credentials = {
 }
 const spotify = new Spotify(credentials);
 
+router.get('/info', async (req, res) => {
+    const url = req.query.url;
+    if(url == undefined) res.send('No url provided').status(400);
+
+    const data = await spotify.getTrack(url);
+
+    console.log(data);
+    
+    res.send({title: data.name, url: url}).status(200);
+});
+
 router.get('/downloadSingle', async (req, res) => {
     const songUrl = req.query.url;
     if(songUrl == undefined) res.send('No song url provided').status(400);
 
     const song = await spotify.getTrack(songUrl);
     const songData = await spotify.downloadTrackFromInfo(song);
-    fs.writeFile(`./song-cache/${song.name}.wav`, songData).then(() => {
+    await fs.writeFile(`./song-cache/${song.name}.wav`, songData).then(async () => {
         console.log(`${song.name} saved`);
         res.sendFile(path.resolve(`./song-cache/${song.name}.wav`));
-        fs.remove(`./song-cache/${song.name}.wav`).then(() => {
+        await fs.remove(`./song-cache/${song.name}.wav`).then(() => {
             console.log('Removed file ' + song.name + '.wav');
         });
     }).catch(err => {
