@@ -3,13 +3,13 @@ const app = express();
 
 const helmet = require('helmet');
 
-const downloadYoutubeRouter = require('./routes/downloadYoutube.route');
-const downloadSpotifyRouter = require('./routes/downloadSpotify.route');
+const youtubeRouter = require('./routes/youtube.route');
+const spotifyRouter = require('./routes/spotify.route');
 
 app.use(helmet());
 
-app.use('/downloadYoutube', downloadYoutubeRouter);
-app.use('/downloadSpotify', downloadSpotifyRouter);
+app.use('/api/v1/youtube', youtubeRouter);
+app.use('/api/v1/spotify', spotifyRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
@@ -17,5 +17,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(5000, () => {
-    console.log('Example app listening on port 5000!');
+    console.log('Song Downloader API listening on port 5000!');
 });

@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +16,10 @@
     "fluent-ffmpeg": "^2.1.2",
     "fs-extra": "^10.1.0",
     "helmet": "^5.1.0",
+    "jszip": "^3.10.0",
     "nodemon": "^2.0.19",
     "spotifydl-core": "^0.2.0",
-    "ytdl-core": "^4.11.0"
+    "ytdl-core": "^4.11.0",
+    "ytdl-getinfo": "^1.1.0"
   }
 }
