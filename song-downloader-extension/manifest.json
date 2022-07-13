@@ -1,15 +1,23 @@
 {
     "name": "Song Downloader",
-    "description": "Downloads songs from YouTube/Spotify",
+    "description": "A tool to download songs from YouTube and Spotify.",
     "manifest_version": 3,
-    "version": "0.0.1",
+    "version": "0.1.0",
     "host_permissions": [
         "https://*/*",
         "http://*/*"
     ],
+    "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png",
+        "512": "icons/512.png"
+    },
     "permissions": [
         "tabs",
         "storage",
+        "scripting",
         "downloads"
     ],
     "action": {
