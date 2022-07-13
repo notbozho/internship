@@ -12,7 +12,7 @@ const songUrl = document.getElementById('songUrl')
 
 const form = document.getElementById('urlForm');
 
-const API_URL = 'http://localhost:5000/api/v1';
+const API_URL = 'http://35.189.238.119:5000/api/v1';
 
 let audioOnly = false;
 
