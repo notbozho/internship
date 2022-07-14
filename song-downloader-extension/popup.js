@@ -98,7 +98,7 @@ async function downloadCurrent() {
             }).catch((err) => {
                 videoInfo.innerText = `There was an error downloading the video`;
                 feedbackText.innerText = "";
-                feedbackParagraph = "";
+                feedbackParagraph.innerText = "";
                 form.hidden = false;
                 console.log(err);
             });
