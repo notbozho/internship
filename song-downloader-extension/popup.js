@@ -25,13 +25,6 @@ function isValidUrl(url) {
     return ((url.includes('youtube.com') || url.includes('youtu.be')) && url.includes('?v=') || url.includes('&v=')) || (url.includes('open.spotify.com') && (url.includes('track/')));
 }
 
-function getVideoId(input) {
-    return input.match(/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/user\/\S+|\/ytscreeningroom\?v=|\/sandalsResorts#\w\/\w\/.*\/))([^\/&]{10,12})/)[1]; 
-}
-
-function getPlatform() {
-
-}
 
 async function downloadCurrent() {
     let url;
@@ -91,7 +84,7 @@ async function downloadCurrent() {
                 filename: info.title + (platform.includes('spotify') ? '.wav' : (audioOnly ? ".wav" : ".mp4"))
             }).then(() => {
                 feedbackText.innerText = "";
-                feedbackParagraph = "";
+                feedbackParagraph.innerText = "";
                 videoInfo.innerText = `Done!`;
                 form.hidden = false;
                 audioOnlySwitch.removeAttribute('disabled');
