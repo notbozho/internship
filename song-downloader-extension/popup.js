@@ -186,7 +186,7 @@ async function download(url) {
     downloadCurrentTabBtn.hidden = true;
     form.hidden = true;
     feedbackText.innerText = "Connecting to server...";
-fetch('http://localhost:5000/').then(res => {
+fetch('http://35.189.238.119:5000/').then(res => {
     feedbackText.innerText = "";
     audioOnlySwitch.hidden = false;
     form.hidden = false;
